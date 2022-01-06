@@ -1,16 +1,24 @@
 <!doctype html>
 <html lang="en">
   <head>
+
+    <style>
+      h1 {text-align: center;}
+      p {text-align: center;}
+    </style>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- CSS (bootstrap and custom) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" > 
 
     <title>HotCrypto</title>
+
   </head>
-  <body>
+  <body style="background-color:#141418;">
       <nav class="navbar navbar-expand navbar-dark bg-dark"> 
           <a href="/" class="navbar-brand">HotCrypto</a>
           <div class="navbar navbar-collapse">
@@ -19,21 +27,46 @@
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/about" class="nav-link">About</a>
+                    <a href="https://github.com/jerry-oconnor/HotCrypto" target="_blank" class="nav-link">Source Code</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/contact" class="nav-link">Contact</a>
+                    <a href="https://www.linkedin.com/in/jeremiah-oconnor/" target="_blank" class="nav-link">Contact</a>
                 </li>
             </ul>
             </div>
       </nav>
-      <h1>
-      <ol>
-        {% for i in range(10) %} <!-- display top 10 coins by mention --> 
-          <li><p>{{ entries[i][0] }}: {{entries[i][1]}} mentions</p></li>
+      <h1 style="color:#FFFFFF">Top Cryptocurrencies by recent mentions in <a href="https://www.reddit.com/r/cryptocurrency">r/cryptocurrency</a></h1>
+      <h2>
+      <br>
+        {% for i in range(12) %} <!-- display top 12 coins by mention --> 
+          <!-- rainbow --> 
+          {% if i == 0 %}
+            <p style="color:#ff0000">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 1 %}
+            <p style="color:#ff8000">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 2 %}
+            <p style="color:#ffff00">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 3 %}
+            <p style="color:#80ff00">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 4 %}
+            <p style="color:#00ff00">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 5 %}
+            <p style="color:#00ff80">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 6 %}
+            <p style="color:#00ffff">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 7 %}
+            <p style="color:#0080ff">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 8 %}
+            <p style="color:#0000ff">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 9 %}
+            <p style="color:#8000ff">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 10 %}
+            <p style="color:#ff00ff">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% elif i == 11 %}
+            <p style="color:#ff0080">{{(i+1)}}. {{ entries[i][0] }}: {{entries[i][1]}} mentions</p>
+          {% endif %}
         {% endfor %}
-      </h1>
-      </ol>
+      </h2>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
