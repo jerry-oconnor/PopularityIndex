@@ -1,1 +1,2 @@
-*.Jinja linguist-detectable=false
+*.jinja2 linguist-detectable=false
+*.py linguist-detectable=true
