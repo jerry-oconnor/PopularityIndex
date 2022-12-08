@@ -1,4 +1,4 @@
-# HotCrypto
+# Popularity Index
 r/cryptocurrency mention data hosted at https://myhotcrypto.herokuapp.com/
 
 # Methodology 
